@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aiPluginUtterances>
+        <developerName>utterance_calculatee0</developerName>
+        <language>en_US</language>
+        <masterLabel>utterance_calculatee0</masterLabel>
+        <utterance>calculate estimates for these features</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_provideest1</developerName>
+        <language>en_US</language>
+        <masterLabel>utterance_provideest1</masterLabel>
+        <utterance>Provide estimations for all features</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_provideest2</developerName>
+        <language>en_US</language>
+        <masterLabel>utterance_provideest2</masterLabel>
+        <utterance>Provide estimates for these features</utterance>
+    </aiPluginUtterances>
+    <canEscalate>false</canEscalate>
+    <description>Provides estimations of hours for Salesforce features based on the product family &apos;software&apos;. Lists features under the product and provides a breakdown of implementation details.</description>
+    <developerName>Salesforce_Feature_Estimation</developerName>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__IdentifyObjectByName</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__QueryRecords</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__QueryRecordsWithAggregate</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>schema_ai__IdentifyFieldByName</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>schema_ai__IdentifyObjectByName</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__IdentifyRecordByName</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__SummarizeRecord</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Bifurcate each selected feature in bucket of products fetched where Family is Software</description>
+        <developerName>instruction_bifurcatee0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_bifurcatee0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Estimate implementation hours for each features</description>
+        <developerName>instruction_estimateim1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_estimateim1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Fetch the product from Salesforce where family is Software do not show them in conversation</description>
+        <developerName>instruction_fetchthepr2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_fetchthepr2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>For each feature provided, list them under the corresponding product.</description>
+        <developerName>instruction_foreachfea3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_foreachfea3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Output only the relevant products and the hours</description>
+        <developerName>instruction_outputonly4</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_outputonly4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Provide a breakdown of each feature and its implementation details.</description>
+        <developerName>instruction_provideabr5</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_provideabr5</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Show hours for each product fetched aggregated from the features hours estimations</description>
+        <developerName>instruction_showhoursf6</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_showhoursf6</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Strictly output only the agreegate hours in each of this window Custom Development Services, Data Migration Services, Discovery &amp; Planning, Go-Live &amp; Hypercare Support, Testing &amp; QA Services and Training Services</description>
+        <developerName>instruction_strictlyou7</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_strictlyou7</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Summarize the total products fetched and net hours for the for all the products fetched.</description>
+        <developerName>instruction_summarizet8</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_summarizet8</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>You will receive a list of Salesforce features as input</description>
+        <developerName>instruction_youwillrec9</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_youwillrec9</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Salesforce Feature Estimation</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to fetch the product from Salesforce where family is &apos;software&apos; and for each feature provided, bifurcate them under the product fetched. Provide estimations of hours</scope>
+</GenAiPlugin>

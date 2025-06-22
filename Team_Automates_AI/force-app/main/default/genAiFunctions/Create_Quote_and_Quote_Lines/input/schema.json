@@ -1,0 +1,25 @@
+{
+  "required" : [ "ProductQuantityWwapper", "opportunityId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "ProductQuantityWwapper" : {
+      "title" : "ProductQuantityWwapper",
+      "description" : "Collection of Apex-Defined Wrapper Class) – Each item contains:\n\nProductId (Text)\n\nQuantity (Number)",
+      "maxItems" : 2000,
+      "items" : {
+        "lightning:type" : "@apexClassType/c__ProductQuantityWwapper?isAuraEnabled=true"
+      },
+      "lightning:type" : "lightning__listType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "opportunityId" : {
+      "title" : "opportunityId",
+      "description" : "The ID of the Opportunity to link the Quote.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

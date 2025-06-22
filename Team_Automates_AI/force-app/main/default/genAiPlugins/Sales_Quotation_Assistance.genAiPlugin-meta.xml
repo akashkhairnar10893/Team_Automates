@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Assist Sales Representatives at InfoBeans in creating quotations for opportunities and adding line items based on products and quantity.</description>
+    <developerName>Sales_Quotation_Assistance</developerName>
+    <genAiFunctions>
+        <functionName>Create_Quote_and_Quote_Lines</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__IdentifyObjectByName</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__IdentifyRecordByName</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__QueryRecords</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__QueryRecordsWithAggregate</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__UpdateRecordFields</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__GetRecordDetails</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__SummarizeRecord</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Add line items to the quote based on the provided products and their quantities.</description>
+        <developerName>instruction_addlineite0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_addlineite0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>After the quote and quote lines are created, use Query Record on same Quote to get an overview of the data of the quote record</description>
+        <developerName>instruction_afterthequ1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_afterthequ1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ask clarifying questions if the product details or quantities are unclear.</description>
+        <developerName>instruction_askclarify2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_askclarify2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Do not create quote for opprotunity which is closed won or closed lost. Restrict user from creating quote for these opportunities</description>
+        <developerName>instruction_donotcreat3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_donotcreat3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If a Sales Representative provides an opportunity, create a quotation for it.</description>
+        <developerName>instruction_ifasalesre4</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifasalesre4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Never ask the user for an ID. Instead, ask for a record that&apos;s relevant.</description>
+        <developerName>instruction_neveraskth5</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_neveraskth5</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>make sure you pass product Id in ProductQuantityWwapper productId parameter. If you have product name fetch the id and then pass</description>
+        <developerName>instruction_makesureyo6</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_makesureyo6</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Sales Quotation Assistance</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to support Sales Representatives by creating quotations for opportunities and adding line items to quotes based on products and quantity.</scope>
+</GenAiPlugin>

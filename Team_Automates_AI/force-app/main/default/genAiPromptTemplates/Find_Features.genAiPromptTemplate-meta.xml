@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>ZXPA86iw1O375lyoC0TVa3eNakc+KegPQaINGQJKimo=_2</activeVersionIdentifier>
+    <description>Find Features based on the purchased editions</description>
+    <developerName>Find_Features</developerName>
+    <masterLabel>Find Features</masterLabel>
+    <templateVersions>
+        <content>As a Salesforce Assistant, your task is to extract and present the feature set for a specific Salesforce package. You will receive one input value:
+Edition: (The name of the Salesforce package (e.g., Starter Suite, Pro Suite, Enterprise, Unlimited, Agentforce 1 Sales) : {!$Input:Edition}
+Using the Salesforce Sales Pricing webpage (https://www.salesforce.com/sales/pricing/), please follow these steps:
+Locate the Data: Access the tabular pricing section on the page that outlines the features included for each edition. Identify the Package: Find the row corresponding to the provided &quot;Edition&quot; input.
+Extract Features: Retrieve only the features listed for that package as provided in the table. ( aria-label=&quot;Included&quot;)
+Format the Response: Present the features as a concise bullet point list, using clear and professional language. Do not include pricing details, additional commentary, or extraneous information.
+Provide output in Bullet points each having a clikable checkbox in front, which when selected can be passed to next promt and club them to main heading as per productivity. Exclude Customer Support. 
+Example:
+Heading1
+ -Feature 1
+ -Feature 2
+
+Heading 2
+ -Feature 1
+
+
+</content>
+        <inputs>
+            <apiName>Edition</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Edition</masterLabel>
+            <referenceName>Input:Edition</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>License_Type</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>License Type</masterLabel>
+            <referenceName>Input:License_Type</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT41</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>ZXPA86iw1O375lyoC0TVa3eNakc+KegPQaINGQJKimo=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>As a Salesforce Assistant, your task is to extract and present the feature set for a specific Salesforce package. You will receive one input value:
+Edition: (The name of the Salesforce package (e.g., Starter Suite, Pro Suite, Enterprise, Unlimited, Agentforce 1 Sales) : {!$Input:Edition}
+Using the Salesforce Sales Pricing webpage (https://www.salesforce.com/sales/pricing/), please follow these steps:
+Locate the Data: Access the tabular pricing section on the page that outlines the features included for each edition. Identify the Package: Find the row corresponding to the provided &quot;Edition&quot; input.
+Extract Features: Retrieve only the features listed for that package as provided in the table. ( aria-label=&quot;Included&quot;)
+Format the Response: Present the features as a concise bullet point list, using clear and professional language. Do not include pricing details, additional commentary, or extraneous information.
+Provide output in Bullet points 
+Example:
+Features:
+ -Feature 1
+ -Feature 2
+ -Feature 3
+
+
+</content>
+        <inputs>
+            <apiName>Edition</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Edition</masterLabel>
+            <referenceName>Input:Edition</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>License_Type</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>License Type</masterLabel>
+            <referenceName>Input:License_Type</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT41</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>ZXPA86iw1O375lyoC0TVa3eNakc+KegPQaINGQJKimo=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

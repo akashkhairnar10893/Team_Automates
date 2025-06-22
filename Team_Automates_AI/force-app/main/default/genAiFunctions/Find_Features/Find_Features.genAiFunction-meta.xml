@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Find Features based on the purchased editions. For each of the output bullet feature, provide a checkbox, which user can select. So from the output user can multi select the features that they want, which can be passed to the next action.</description>
+    <invocationTarget>Find_Features</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Find Features</masterLabel>
+    <progressIndicatorMessage>Loading Features</progressIndicatorMessage>
+</GenAiFunction>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>For each  Salesforce feature provided find an implementation time estimate. For the product fetched for family software, classify each feature to the product and provide an estimation. estimation should be realistic.</description>
+    <invocationTarget>Create_Estimations_based_on_feature</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Create Estimations based on feature</masterLabel>
+    <progressIndicatorMessage>calculating estimates</progressIndicatorMessage>
+</GenAiFunction>

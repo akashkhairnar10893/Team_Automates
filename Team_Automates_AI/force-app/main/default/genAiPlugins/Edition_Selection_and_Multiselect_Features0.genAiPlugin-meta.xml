@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <aiPluginUtterances>
+        <developerName>utterance_unlimited0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_unlimited0</masterLabel>
+        <utterance>Unlimited</utterance>
+    </aiPluginUtterances>
+    <canEscalate>false</canEscalate>
+    <description>This topic guides the agent to take the edition from the user and provide multiselect features for further data processing such as estimation of hours.</description>
+    <developerName>Edition_Selection_and_Multiselect_Features0</developerName>
+    <genAiFunctions>
+        <functionName>Find_Features</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Ask the user for the edition they would like to select.</description>
+        <developerName>instruction_asktheuser0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_asktheuser0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Provide multiselect options for the user to choose from based on the output from the promt buildwer</description>
+        <developerName>instruction_providemul1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_providemul1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once the user has made their selections, pass the data to the next action for further processing.</description>
+        <developerName>instruction_oncetheuse2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_oncetheuse2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the user is unsure about the edition, offer to provide more details or examples to help them decide.</description>
+        <developerName>instruction_iftheuseri3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_iftheuseri3</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Edition Selection and Multiselect Features</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to assist users in selecting the edition and providing multiselect features that can be passed to the next action for data processing.</scope>
+</GenAiPlugin>

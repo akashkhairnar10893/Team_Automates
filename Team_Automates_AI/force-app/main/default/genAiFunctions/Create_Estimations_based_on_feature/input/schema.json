@@ -1,0 +1,14 @@
+{
+  "required" : [ "Input:List_Of_features" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:List_Of_features" : {
+      "title" : "List Of features",
+      "description" : "Get lis of all the features and map it to the product fetched",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>ZXPA86iw1O375lyoC0TVa3eNakc+KegPQaINGQJKimo=_5</activeVersionIdentifier>
+    <description>For each  Salesforce feature provided find an implementation time estimate. For the product fetched for family software, classify each feature to the product and provide an estimation. estimation should be realistic.</description>
+    <developerName>Create_Estimations_based_on_feature</developerName>
+    <masterLabel>Create Estimations based on feature</masterLabel>
+    <templateVersions>
+        <content>You are a Salesforce implementation partner. &gt; You will receive a list of Salesforce features as input: {!$Input:List_Of_features} &gt; Follow these steps: &gt; 1. Query Salesforce Product2 records where Family = &quot;Software&quot;. &gt; 2. For each input feature: &gt; - Match it to the most relevant product (if applicable). &gt; - Estimate implementation hours. &gt; - Estimate training hours (max 1 hour per feature). Some features may not require training or QA—adjust accordingly based on feature type and typical Salesforce use cases. &gt; 
+3. Output a list where each row includes: &gt; - Feature name  &gt; - Net Estimated implementation hours(include all hours of dev,QA etc which are fetched from product)  &gt; 
+4. Provide a final summary: &gt; - Total number of distinct products fetched &gt; - Net total of implementation + training hours across all features
+Make sure the estimates reflect realistic Salesforce implementation practices.
+</content>
+        <inputs>
+            <apiName>List_Of_features</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>List Of features</masterLabel>
+            <referenceName>Input:List_Of_features</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>ZXPA86iw1O375lyoC0TVa3eNakc+KegPQaINGQJKimo=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a Salesforce implementation partner. &gt; You will receive a list of Salesforce features as input: {!$Input:List_Of_features} 
+
+Query all the product record where family is software. then classify each feature to the product. one feature may belong to multiple  product. for example: Email integration needs all products but page layout might not require training. 
+each training product can not cross 1 hr of estimation.
+you end list will contain all the products fetched and thier estimation calculated which is a summation of each pfeature belonging to that product.. 
+</content>
+        <inputs>
+            <apiName>List_Of_features</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>List Of features</masterLabel>
+            <referenceName>Input:List_Of_features</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Draft</status>
+        <versionIdentifier>ZXPA86iw1O375lyoC0TVa3eNakc+KegPQaINGQJKimo=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a Salesforce implementation partner. &gt; You will receive a list of Salesforce features as input: {!$Input:List_Of_features} &gt; Follow these steps: &gt; 1. Query Salesforce Product2 records where Family = &quot;Software&quot;. &gt; 2. For each input feature: &gt; - Match it to the most relevant product (if applicable). &gt; - Estimate implementation hours. &gt; - Estimate training hours (max 1 hour per feature). Some features may not require training or QA—adjust accordingly based on feature type and typical Salesforce use cases. &gt; 
+3. Output a list where each row includes: &gt; - Feature name  &gt; - Net Estimated implementation hours(include all hours of dev,QA etc which are fetched from product)  &gt; 
+4. Provide a final summary: &gt; - Total number of distinct products fetched &gt; - Net total of implementation + training hours across all features
+Make sure the estimates reflect realistic Salesforce implementation practices.
+</content>
+        <inputs>
+            <apiName>List_Of_features</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>List Of features</masterLabel>
+            <referenceName>Input:List_Of_features</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>ZXPA86iw1O375lyoC0TVa3eNakc+KegPQaINGQJKimo=_3</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a Salesforce implementation partner. &gt; You will receive a list of Salesforce features as input: {!$Input:List_Of_features} &gt; Query Salesforce Product2 records where Family = &quot;Software&quot;. 
+Classify each feature provided to the corresponding products.  
+Make sure the estimates reflect realistic Salesforce implementation practices.
+Some features might not fit to some products, example: training is not applicable for page layouts, record types etc. 
+Training hours should not be more than 1 hour. 
+The final list should should have all products fetched and estimated hours.
+if asked to create quote, pass the product id, and estimated hours as quanity.
+</content>
+        <inputs>
+            <apiName>List_Of_features</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>List Of features</masterLabel>
+            <referenceName>Input:List_Of_features</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>ZXPA86iw1O375lyoC0TVa3eNakc+KegPQaINGQJKimo=_4</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a Salesforce implementation partner. &gt; You will receive a list of Salesforce features as input: {!$Input:List_Of_features} &gt; Follow these steps: &gt; 1. Query Salesforce Product2 records where Family = &quot;Software&quot;. &gt; 2. For each input feature: &gt; - Match it to the most relevant product (if applicable). &gt; - Estimate implementation hours. &gt; - Estimate training hours (max 1 hour per feature). Some features may not require training or QA—adjust accordingly based on feature type and typical Salesforce use cases. &gt; 
+3. Output a list where each row includes: &gt; - Product Name &gt; - Net Estimated implementation hours(include all hours of dev,QA etc which are fetched from product) 
+Make sure the estimates reflect realistic Salesforce implementation practices.
+</content>
+        <inputs>
+            <apiName>List_Of_features</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>List Of features</masterLabel>
+            <referenceName>Input:List_Of_features</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>ZXPA86iw1O375lyoC0TVa3eNakc+KegPQaINGQJKimo=_5</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

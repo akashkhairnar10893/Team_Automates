@@ -1,0 +1,21 @@
+{
+  "required" : [ "Input:License_Type", "Input:Edition" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:License_Type" : {
+      "title" : "License Type",
+      "description" : "Default None. ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:Edition" : {
+      "title" : "Edition",
+      "description" : "The Input should be Salesforce edition type such as Enterprise, Unlimited etc, passed via text",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}
